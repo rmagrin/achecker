@@ -21,4 +21,5 @@ deploy:
   gem: achecker
   on:
     tags: true
+    all_branches: true
     repo: rmagrin/achecker
