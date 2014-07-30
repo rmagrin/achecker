@@ -1,4 +1,4 @@
-# AChecker
+# AChecker [![Build Status](https://travis-ci.org/rmagrin/achecker.svg?branch=master)](https://travis-ci.org/rmagrin/achecker)
 
 Ruby wrapper for [AChecker Web Accessibility Checker](http://achecker.ca)
 
