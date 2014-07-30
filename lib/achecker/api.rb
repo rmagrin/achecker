@@ -1,5 +1,4 @@
 require 'net/http'
-
 require 'achecker/url_builder'
 require 'achecker/check_result_builder'
 
