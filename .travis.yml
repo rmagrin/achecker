@@ -1,17 +1,24 @@
 language: ruby
 rvm:
-  - 1.9.2
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.1
-  - 2.1.2
-  - ruby-head
-  - jruby-19mode
-  - jruby
-  - jruby-head
-
+- 1.9.2
+- 1.9.3
+- 2.0.0
+- 2.1.0
+- 2.1.1
+- 2.1.2
+- ruby-head
+- jruby-19mode
+- jruby
+- jruby-head
 matrix:
   allow_failures:
-    - rvm: jruby-head
-    - rvm: ruby-head
+  - rvm: jruby-head
+  - rvm: ruby-head
+deploy:
+  provider: rubygems
+  api_key:
+    secure: aNXNg6dSXvTBvE52SnNkLCbZcX7vaJkWB0TSqOIxJLzmXKd5LMgxEZ9HD5xHn3jFqpzx1kXyHOrD88aaSYE91RCcku8ldv6SpFoxpHKN17aLsIQpzZx6rJxGbFvemW2Y60tsNHf3ToCdakApB/3XZg+BH3QHvE9GECzVAcC17Pg=
+  gem: achecker
+  on:
+    tags: true
+    repo: rmagrin/achecker
