@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rafael.magrin@gmail.com"]
   spec.summary       = "Wrapper for AChecker Web Accessibility Checker"
   spec.description   = "Wrapper for AChecker Web Accessibility Checker"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/rmagrin/achecker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
