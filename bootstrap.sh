@@ -15,6 +15,10 @@ function install_basic_packages {
   apt-get install -y vim curl git
 }
 
+function install_libs {
+  apt-get install -y zlib1g-dev
+}
+
 function install_ruby {
   echo "Installing ruby..."
   apt-get install -y ruby2.1 ruby2.1-dev
@@ -24,4 +28,5 @@ function install_ruby {
 
 update_apt_repositories
 install_basic_packages
+install_libs
 install_ruby
