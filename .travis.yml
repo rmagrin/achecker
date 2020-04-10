@@ -1,4 +1,5 @@
 language: ruby
+
 rvm:
 - 2.3.8
 - 2.4.10
@@ -9,16 +10,20 @@ rvm:
 - jruby-19mode
 - jruby
 - jruby-head
-matrix:
+
+jobs:
   allow_failures:
   - rvm: jruby-head
   - rvm: ruby-head
-deploy:
-  provider: rubygems
-  api_key:
-    secure: nNu6E7wClBo6DEkl+0Rd0ouQr29YwwruhqCI0op/N1AdL5Vq2DW3pSKHZYHHE36T3y5sudV9GPddnJ2O+hhNsp3pMacC7hkfs/L1Gi5WkJ2s421McX13TGfilX22iEMj4Ezlskka1ovAUuzewri0W3UAX8gNiN6RgaMTS6zRivU=
-  gem: achecker
-  on:
-    tags: true
-    all_branches: true
-    repo: rmagrin/achecker
+  include:
+    - stage: deploy
+      rvm: 2.7.1
+      deploy:
+        provider: rubygems
+        api_key:
+          secure: nNu6E7wClBo6DEkl+0Rd0ouQr29YwwruhqCI0op/N1AdL5Vq2DW3pSKHZYHHE36T3y5sudV9GPddnJ2O+hhNsp3pMacC7hkfs/L1Gi5WkJ2s421McX13TGfilX22iEMj4Ezlskka1ovAUuzewri0W3UAX8gNiN6RgaMTS6zRivU=
+        gem: achecker
+        on:
+          tags: true
+          all_branches: true
+          repo: rmagrin/achecker
