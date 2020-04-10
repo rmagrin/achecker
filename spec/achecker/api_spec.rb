@@ -1,8 +1,6 @@
 require 'spec_helper'
 require 'cgi'
-require 'webmock'
-
-include WebMock::API
+require 'webmock/rspec'
 
 module AChecker
 
