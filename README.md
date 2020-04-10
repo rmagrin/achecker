@@ -26,7 +26,7 @@ Or install it yourself as:
    # replace with the web service id provided for registered users of achecker.
    id = "222c0b31450b95b0e010f5f83d9c9683f95ca89a"
    checker = AChecker::Api.new(id)
-   result = checker.check("http://example.com")
+   result = checker.check("https://example.com")
 ```
 
 ## Contributing

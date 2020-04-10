@@ -4,7 +4,7 @@ module AChecker
 
   class UrlBuilder
 
-    BASE_URL = "http://achecker.ca/checkacc.php"
+    BASE_URL = "https://achecker.ca/checkacc.php"
 
     def initialize(id = nil)
       @id = id

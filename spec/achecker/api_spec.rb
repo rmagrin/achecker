@@ -21,7 +21,7 @@ module AChecker
         eos
 
 
-        stub_request(:get, "achecker.ca/checkacc.php")
+        stub_request(:get, "https://achecker.ca/checkacc.php")
           .with(:query => {"uri" => url, "id" => id, "output" => "rest"})
           .to_return(:body => xml)
 
