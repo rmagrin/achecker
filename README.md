@@ -1,4 +1,4 @@
-# AChecker [![Gem Version](https://badge.fury.io/rb/achecker.svg)](http://badge.fury.io/rb/achecker) [![Build Status](https://travis-ci.org/rmagrin/achecker.svg?branch=master)](https://travis-ci.org/rmagrin/achecker) [![Dependency Status](https://gemnasium.com/rmagrin/achecker.svg)](https://gemnasium.com/rmagrin/achecker) [![Code Climate](https://codeclimate.com/github/rmagrin/achecker.png)](https://codeclimate.com/github/rmagrin/achecker)
+# AChecker [![Gem Version](https://badge.fury.io/rb/achecker.svg)](http://badge.fury.io/rb/achecker) [![Build Status](https://travis-ci.org/rmagrin/achecker.svg?branch=master)](https://travis-ci.org/rmagrin/achecker) [![Code Climate](https://codeclimate.com/github/rmagrin/achecker.png)](https://codeclimate.com/github/rmagrin/achecker)
 
 Ruby wrapper for [AChecker Web Accessibility Checker](http://achecker.ca)
 
