@@ -4,10 +4,11 @@ module AChecker
 
   describe UrlBuilder do
 
-    let(:id) { "12345" }
-    let(:builder) { UrlBuilder.new(id) }
-
     describe "#build" do
+
+      let(:id) { "12345" }
+      let(:achecker_url) { "https://some.other.url/checkacc.php" } 
+      let(:builder) { UrlBuilder.new(id, achecker_url) }
 
       context "when output is rest" do
         it "should set the id" do
@@ -21,6 +22,11 @@ module AChecker
           url = builder.build("http://target.url", "html").to_s
           expect(url).not_to include("id=#{id}")
         end
+      end
+
+      it "should use the provided url" do
+        url = builder.build("http://target.url", "rest").to_s
+        expect(url).to start_with(achecker_url)
       end
 
     end

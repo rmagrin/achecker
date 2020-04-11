@@ -6,8 +6,10 @@ module AChecker
 
   class Api
 
-    def initialize(id)
-      @url_builder = UrlBuilder.new(id)
+    BASE_URL = "https://achecker.ca/checkacc.php"
+
+    def initialize(id, achecker_url = nil)
+      @url_builder = UrlBuilder.new(id, achecker_url || BASE_URL)
       @result_builder = CheckResultBuilder.new
     end
 
@@ -15,7 +17,9 @@ module AChecker
       url = @url_builder.build(target_url, "rest")
       response = Net::HTTP.get_response(url)
 
-      raise "Error processing \"#{target_url}\". Response status code #{response.code}" unless response.kind_of?(Net::HTTPSuccess)
+      unless response.kind_of?(Net::HTTPSuccess) then
+        raise "Error processing \"#{target_url}\". Response status code #{response.code} returned when requesting to achecker at #{url}"
+      end
 
       @result_builder.build(target_url, @url_builder.build(target_url, "html"), response.body)
     end

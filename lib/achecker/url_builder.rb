@@ -4,14 +4,13 @@ module AChecker
 
   class UrlBuilder
 
-    BASE_URL = "https://achecker.ca/checkacc.php"
-
-    def initialize(id = nil)
+    def initialize(id, achecker_url)
       @id = id
+      @achecker_url = achecker_url
     end
 
     def build(target_url, output)
-      url = "#{BASE_URL}?uri=#{CGI::escape(target_url)}&output=#{output}"
+      url = "#{@achecker_url}?uri=#{CGI::escape(target_url)}&output=#{output}"
       url = "#{url}&id=#{@id}" if output == "rest"
       URI(url)
     end
