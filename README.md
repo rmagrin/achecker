@@ -29,6 +29,17 @@ Or install it yourself as:
    result = checker.check("https://example.com")
 ```
 
+Optionally you can provide the achecker URL:
+
+```ruby
+   require 'achecker'
+
+   # replace with the web service id provided for registered users of achecker.
+   id = "222c0b31450b95b0e010f5f83d9c9683f95ca89a"
+   checker = AChecker::Api.new(id, "https://achecker.ca/checkacc.php")
+   result = checker.check("https://example.com")
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/rmagrin/achecker/fork )
